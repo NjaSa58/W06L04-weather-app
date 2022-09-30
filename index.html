@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="city-input-form">
+        <div class="row search">
+          <div class="col-9">
+            <div class="mb-3">
+              <input
+                type="text"
+                placeholder="Enter a city"
+                class="form-control shadow-sm"
+                id ="city-input"
+              />
+            </div>
+          </div>
+          <div class="col-2">
+            <button type="search" class="btn btn-primary shadow-sm">Submit</button>
+          </div>
+          <div class="col-1">
+            <button type="search" class="btn btn-light shadow-sm" id="current-location-button">📌</button>
+          </div>
+        </div>
+      </form>
+      <div class="topdata">
+        <div class="header">
+          <strong id="city-name"></strong>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-2 timedate">
+            <div class="dateleft" id="current-day-time">Sun 14:00h</div>
+          </div>
+          <div class="col-2 todayweather">
+            <img src="img/sunce.png" alt="todayweather" width=80px" />
+          </div>
+          <div class="col-2 todaytemperature" >
+            <span id="temperature"></span>
+            <a href="#" id="celsius-link">°C</a>|
+            <a href="#" id="fahrenheit-link">°F</a> 
+            <span id="weather-description">sunny</span>
+            
+          </div>
+          <div class="col-6">
+            <div class="rightdata">
+            <div class="row ">
+              <div class="col">
+                <img src="img/high.png" alt="high" width="30px" />
+                <strong>
+                  <span id="tempMax"></span> °C</strong>
+              </div>
+              <div class="col wind ">
+               wind
+                <br />
+                <strong><span id="wind"></span> kmh
+                </strong>
+              </div>
+              <div class="col sunrise">
+                sunrise
+                <strong id="sunrise"></strong>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col">
+                <img src="img/low.png" alt="high" width="30px" />
+                <strong><span id="tempMin"></span> °C</strong>
+              </div>
+              <div class="col rain">
+                humidity
+                <br />
+                <strong><span id="humidity"></span>%</strong>
+              </div>
+              <div class="col sunset">real feel
+                <br> 
+                <strong><span id="realFeel"></span> °C
+                </strong>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="temperatureday">
+        <div class="row">
+          <div class="col day1">
+            Mon <br /><img src="img/grmljavina.png" alt="day1" width="50px" />
+            <br />
+            19°C
+            <br />
+            27°C
+          </div>
+          <div class="col day2">
+            Tue<br /><img src="img/kisa.png" alt="day1" width="50px" />
+            <br />
+            19°C
+            <br />
+            27°C
+          </div>
+          <div class="col day3">
+            Wed <br /><img src="img/oblacno.png" alt="day1" width="50px" />
+            <br />
+            19°C
+            <br />
+            27°C
+          </div>
+          <div class="col day4">
+            Thu <br /><img src="img/sunce.png" alt="day1" width="50px" />
+            <br />
+            19°C
+            <br />
+            27°C
+          </div>
+          <div class="col day5">
+            Fri <br /><img src="img/sunce.png" alt="day1" width="50px" /> <br />
+            19°C
+            <br />
+            27°C
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
