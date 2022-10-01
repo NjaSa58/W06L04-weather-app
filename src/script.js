@@ -37,9 +37,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#tempMin").innerHTML = Math.round(
     response.data.main.temp_min
   );
-  document.querySelector("#realFeel").innerHTML = Math.round(
-    response.data.main.feels_like
-  );
+
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
 
