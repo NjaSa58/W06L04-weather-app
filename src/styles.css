@@ -16,6 +16,10 @@ form {
 .header {
   font-size: 25px;
 }
+
+.temperature {
+  font-size: 30px;
+}
 .temperatureday {
   margin: 30px 0 30px 0;
   text-align: center;
