@@ -41,9 +41,12 @@ function displayWeatherCondition(response) {
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
 
-  //let sunrise = response.data.sys.sunrise;
-  //let sunriseTime = moment(sunrise).format("LT");
-  //console.log(sunrise);
+  let iconPicture = response.data.weather[0].icon;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${iconPicture}.png`
+  );
 }
 
 function searchCity(city) {
@@ -96,4 +99,4 @@ celsiusLink.addEventListener("click", convertToCelsius);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("New York");
+searchCity("London");
