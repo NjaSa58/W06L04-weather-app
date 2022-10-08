@@ -6,7 +6,7 @@ if (hours < 10) {
 }
 let minutes = now.getMinutes();
 if (minutes < 10) {
-  minutes = `0${hours}`;
+  minutes = `0${minutes}`;
 }
 
 let days = [
@@ -51,7 +51,8 @@ function displayWeatherCondition(response) {
   let weatherDescription = response.data.weather[0].description;
   iconElement.setAttribute("alt", weatherDescription);
 
-  celsiusTemperature = data.response.main.temp;
+  celsiusTemperature = response.data.main.temp;
+  console.log(celsiusTemperature);
 }
 
 function searchCity(city) {
@@ -93,9 +94,17 @@ function displayFahrenheitTemperature(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsiusTemperature = null;
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusTemperature = null;
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("London");
