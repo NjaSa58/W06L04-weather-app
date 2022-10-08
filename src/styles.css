@@ -18,7 +18,7 @@ form {
 }
 
 .temperature {
-  font-size: 35px;
+  font-size: 30px;
 }
 .celsiusandfahrenheit {
   position: relative;
@@ -36,6 +36,13 @@ form {
   margin-top: 15px;
   text-align: center;
 }
+
+.todaytemperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
 .rightdata {
   text-align: center;
   border: 2px solid rgba(236, 236, 236);
