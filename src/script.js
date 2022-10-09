@@ -19,6 +19,28 @@ let days = [
   "Saturday",
 ];
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  forecastElement.innerHTML = `
+    <div class="row">
+          <div class="col day1">
+            Mon <br /><img src="img/grmljavina.png" alt="day1" width="50px" />
+            <br />
+            <span class="weather-forecast-temperature-min">
+            19°C
+            </span>
+            <br />
+            <span class="weather-forecast-temperature-max">
+            27°C
+            </span>
+          </div>
+         </div>
+  `;
+}
+
+displayForecast();
+
 let currentDay = days[now.getDay()];
 currentDateTime.innerHTML = `${currentDay} ${hours}:${minutes}`;
 
